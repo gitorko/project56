@@ -1,0 +1,9 @@
+spring:
+  main:
+    banner-mode: "off"
+  redis:
+    database: '0'
+    password: password
+    host: localhost
+    port: '6379'
+    timeout: '60000'
