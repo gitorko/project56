@@ -20,7 +20,7 @@ docker run --rm --name my-redis -p 6379:6379 -d redis redis-server --requirepass
 
 ```
 
-To bring up Redis and UI
+To bring up Redis and Redis Commander UI
 
 ```bash
 docker-compose -f docker/docker-compose-redis.yaml up
