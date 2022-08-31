@@ -1,7 +1,5 @@
 package com.demo.project56.controller;
 
-import java.util.UUID;
-
 import com.demo.project56.domain.Customer;
 import com.demo.project56.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;
