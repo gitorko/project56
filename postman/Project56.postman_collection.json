@@ -95,6 +95,47 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Push to Queue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/send-queue/test1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"send-queue",
+						"test1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get From Queue",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/get-queue",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"get-queue"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

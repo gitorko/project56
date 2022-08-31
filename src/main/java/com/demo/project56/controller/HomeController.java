@@ -1,5 +1,7 @@
 package com.demo.project56.controller;
 
+import java.util.UUID;
+
 import com.demo.project56.domain.Customer;
 import com.demo.project56.repository.CustomerRepository;
 import lombok.RequiredArgsConstructor;
@@ -40,6 +42,17 @@ public class HomeController {
     @GetMapping("/api/customer")
     public Iterable<Customer> getCustomers() {
         return customerRepository.findAll();
+    }
+
+    @GetMapping("/api/send-queue/{message}")
+    public void sendToQueue(@PathVariable String message) {
+        log.info("Sending to queue {}", message);
+        chatTemplate.opsForList().leftPush("app-key", message);
+    }
+
+    @GetMapping("/api/get-queue")
+    public String getFromQueue() {
+        return chatTemplate.opsForList().leftPop("app-key");
     }
 
 }
